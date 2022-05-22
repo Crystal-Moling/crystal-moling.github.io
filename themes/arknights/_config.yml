@@ -63,7 +63,7 @@ mermaid:
 menu:
   Home: '.'
   Archives: ./archives/
-  Friends: ./friends/
+  # Friends: ./friends/
   About: ./about/
 
 # stylesheets loaded in the <head>
