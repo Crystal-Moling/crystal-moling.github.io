@@ -2,6 +2,7 @@
 title: 安装 Active Directory 证书服务
 date: 2022-05-21 21:41:58
 tags: windows server
+category: 学习笔记
 ---
 ## `系统信息`
 
@@ -19,31 +20,31 @@ Windows Server 2008 R2 Datacenter x64
 
 - 勾选 `Active Directory 域服务` , 在 `添加角色向导` 中点击 `添加必须的功能`
 
-![AD-CS-Install-Tutorial_02](./AD-CS-Install-Tutorial_02.jpg)
+![AD-CS-Install-Tutorial_01](./AD-CS-Install-Tutorial_01.jpg)
 
 - 点击 `安装` 按钮完成Active Directory 域服务的安装, 安装完成后点击 `关闭该向导并启动 Active Directory 域服务 安装向导(dcpromo.exe)` 
 
-![AD-CS-Install-Tutorial_04](./AD-CS-Install-Tutorial_04.jpg)
+![AD-CS-Install-Tutorial_02](./AD-CS-Install-Tutorial_02.jpg)
 
 - 选中 `在林中新建域` , 点击 `下一步`
 
 > 如果出现如图所示的错误, 需要在控制面板中给 `Administrator` 账户设置密码
 > 
-> ![AD-CS-Install-Tutorial_06](./AD-CS-Install-Tutorial_06.jpg)
+> ![AD-CS-Install-Tutorial_03](./AD-CS-Install-Tutorial_03.jpg)
 
 - 在 `命名林根域` 页面中输入根域的名字, 在接下来的 `设置林功能级别` 页面中设置基本为 `Windows Server 2008 R2`
 
 - 如果提示静态IP分配, 则按照需求选择选项. 此处选择 `是`
 
-![AD-CS-Install-Tutorial_11](./AD-CS-Install-Tutorial_11.jpg)
+![AD-CS-Install-Tutorial_04](./AD-CS-Install-Tutorial_04.jpg)
 
 - 提示 `无法创建该 DNS 服务器的委派` , 选择 `是`
 
-![AD-CS-Install-Tutorial_12](./AD-CS-Install-Tutorial_12.jpg)
+![AD-CS-Install-Tutorial_05](./AD-CS-Install-Tutorial_05.jpg)
 
 - 为 Administrator 分配密码
 
-![AD-CS-Install-Tutorial_14](./AD-CS-Install-Tutorial_14.jpg)
+![AD-CS-Install-Tutorial_06](./AD-CS-Install-Tutorial_06.jpg)
 
 - 等待配置完成后, Active Directory 域服务 则已安装完毕
 
@@ -67,4 +68,12 @@ Windows Server 2008 R2 Datacenter x64
 
 - 完成安装后, 可以在 IIS 管理器 中 `Default Web Site` 网站中找到 `certsrv` 选项
 
-![AD-CS-Install-Tutorial_26](./AD-CS-Install-Tutorial_26.jpg)
+![AD-CS-Install-Tutorial_07](./AD-CS-Install-Tutorial_07.jpg)
+
+> ## 注意:
+>
+> 在访问证书签发的 Web 页面时需要使用 IP 地址进行访问, 并完成身份认证, 否则会出现以下错误信息
+>
+> ![AD-CS-Install-Tutorial_08](./AD-CS-Install-Tutorial_08.jpg)
+>
+> 注: 使用 Windows 自带认证时可能出现无法登录的错误
