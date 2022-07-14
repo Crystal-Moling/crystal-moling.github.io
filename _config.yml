@@ -3,18 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Ink Ice
+title: Hexo
 subtitle: ''
 description: ''
 keywords:
-author: Moling
+author: John Doe
 language: en
 timezone: ''
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://crystal-moling.github.io
-root: /
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://example.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -41,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -56,13 +55,6 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
-mathjax:
-  tags: none # or 'ams' or 'all'
-  single_dollars: true # enable single dollar signs as in-line math delimiters
-  cjk_width: 0.9 # relative CJK char width
-  normal_width: 0.6 # relative normal (monospace) width
-  append_css: true # add CSS to every page
-  every_page: false # if true, every page will be rendered by mathjax regardless the `mathjax` setting in Front-matter of each article
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -108,8 +100,6 @@ ignore:
 theme: arknights
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-  repo: git@github.com:Crystal-Moling/crystal-moling.github.io.git
-  branch: main
+  type: ''
