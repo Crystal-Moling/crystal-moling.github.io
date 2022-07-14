@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@master
 
       # Runs a single command using the runners shell
-      - name: Setup Node.js 10.x
+      - name: Setup Node.js 16.x
         uses: actions/setup-node@master 
         with:
           node-version: "10.x"
